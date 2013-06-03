@@ -21,7 +21,7 @@ void initializeImageProcessing()
 {
     /*	ここにプログラム起動時の行う画像処理を書く  */
     //inputImage    = cvLoadImage("img/bmp/Mandrill.bmp", CV_LOAD_IMAGE_GRAYSCALE);  // グレースケール
-    inputImage    = cvLoadImage("testset/400.jpg", CV_LOAD_IMAGE_ANYCOLOR);
+    inputImage    = cvLoadImage("testset/102.jpg", CV_LOAD_IMAGE_ANYCOLOR);
     /*  ここまで */
 }
 
