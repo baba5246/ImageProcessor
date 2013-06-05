@@ -8,9 +8,14 @@
 
 #include <iostream>
 #include <GLUT/GLUT.h>
+#include <GLUI/GLUI.h>
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
 
+const int width = 640;
+const int height = 480;
+
+// 元画像格納用
 IplImage *inputImage;
 
 /* 表示用 */
@@ -37,7 +42,10 @@ void display()
 {
     imageProcessing();
     
+    glClearColor(0, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT);
+
+    
     glPixelZoom(1, -1);
     glRasterPos2i(0 , 0);
     
@@ -69,8 +77,12 @@ void display()
     }
     //出力
     glFlush();
+    
 }
 
+void gluiCallback(int num) {
+	exit(0);
+}
 
 void glInit()
 {
@@ -116,11 +128,16 @@ int main(int argc, char *argv[])
     //(OpenCVみたいにまとめないのはargcとargvが必要だから？)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA);
-    glutInitWindowSize(image->width, image->height);
+    glutInitWindowSize(width, height);
     glutCreateWindow("IplImage");
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);
     glInit();
+    
+    
+    GLUI *glui = GLUI_Master.create_glui("control");
+    glui->add_button("Exit", 0, gluiCallback);
+
 	
     //メインループ突入（displayを繰り返し実行）
     glutMainLoop();

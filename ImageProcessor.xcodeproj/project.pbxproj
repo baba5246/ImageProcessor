@@ -15,6 +15,8 @@
 		870F22EA175CFDB9002EEEAB /* libopencv_core.2.4.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F22E7175CFDB9002EEEAB /* libopencv_core.2.4.5.dylib */; };
 		870F22EB175CFDB9002EEEAB /* libopencv_highgui.2.4.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F22E8175CFDB9002EEEAB /* libopencv_highgui.2.4.5.dylib */; };
 		870F22EC175CFDB9002EEEAB /* libopencv_imgproc.2.4.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 870F22E9175CFDB9002EEEAB /* libopencv_imgproc.2.4.5.dylib */; };
+		87DE0C87175F4046003F0AFD /* GLUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE0C86175F4046003F0AFD /* GLUI.framework */; };
+		87DE0C8A175F44A6003F0AFD /* control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87DE0C88175F44A6003F0AFD /* control.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -753,6 +755,9 @@
 		870F2882175D0139002EEEAB /* gt_326.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gt_326.txt; sourceTree = "<group>"; };
 		870F2883175D0139002EEEAB /* gt_327.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gt_327.txt; sourceTree = "<group>"; };
 		870F2884175D0139002EEEAB /* gt_328.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gt_328.txt; sourceTree = "<group>"; };
+		87DE0C86175F4046003F0AFD /* GLUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GLUI.framework; sourceTree = "<group>"; };
+		87DE0C88175F44A6003F0AFD /* control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = control.cpp; sourceTree = "<group>"; };
+		87DE0C89175F44A6003F0AFD /* control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = control.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -766,6 +771,7 @@
 				870F22D0175CEE30002EEEAB /* Foundation.framework in Frameworks */,
 				870F22CE175CEE22002EEEAB /* GLUT.framework in Frameworks */,
 				870F22CC175CEE1B002EEEAB /* OpenGL.framework in Frameworks */,
+				87DE0C87175F4046003F0AFD /* GLUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +801,8 @@
 			children = (
 				870F22C2175CED79002EEEAB /* main.cpp */,
 				870F22C4175CED79002EEEAB /* ImageProcessor.1 */,
+				87DE0C88175F44A6003F0AFD /* control.cpp */,
+				87DE0C89175F44A6003F0AFD /* control.h */,
 			);
 			path = ImageProcessor;
 			sourceTree = "<group>";
@@ -805,6 +813,7 @@
 				870F22E7175CFDB9002EEEAB /* libopencv_core.2.4.5.dylib */,
 				870F22E8175CFDB9002EEEAB /* libopencv_highgui.2.4.5.dylib */,
 				870F22E9175CFDB9002EEEAB /* libopencv_imgproc.2.4.5.dylib */,
+				87DE0C86175F4046003F0AFD /* GLUI.framework */,
 				870F22CF175CEE30002EEEAB /* Foundation.framework */,
 				870F22CD175CEE22002EEEAB /* GLUT.framework */,
 				870F22CB175CEE1B002EEEAB /* OpenGL.framework */,
@@ -1602,6 +1611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				870F22C3175CED79002EEEAB /* main.cpp in Sources */,
+				87DE0C8A175F44A6003F0AFD /* control.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1670,6 +1680,10 @@
 		870F22C9175CED79002EEEAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				"HEADER_SEARCH_PATHS[arch=x86_64]" = /opt/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1682,6 +1696,10 @@
 		870F22CA175CED79002EEEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				"HEADER_SEARCH_PATHS[arch=x86_64]" = /opt/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
